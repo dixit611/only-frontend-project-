@@ -1,0 +1,43 @@
+li{
+    font-weight: 800;
+    
+}
+.html:hover{
+    color: #DD4B25;
+    
+}
+.css:hover{
+    color: #2653E2;
+   
+}
+.javascript:hover{
+    color: #F5D33E;
+    
+}
+.react:hover{
+    color: #087A9F;
+    
+}
+.tailwind:hover{
+    color: #36B7F0;
+}
+#html:hover{
+    font-size: 32px;
+}
+#css:hover{
+    font-size: 32px;
+}
+#javascript:hover{
+    font-size: 32px;
+}
+#react:hover{
+    font-size: 32px;
+}
+#tailwind:hover{
+    font-size: 32px;
+}
+h2:hover{
+    background-color: aqua;
+    
+    color: red;
+}
