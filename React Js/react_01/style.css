@@ -1,0 +1,19 @@
+.hover-button {
+  background-color: #DE5833; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the container fit the button */
+  font-size: 16px; /* Increase font size */
+  margin: 4px 2px; /* Some margin */
+  cursor: pointer; /* Pointer/hand icon */
+  transition-duration: 0.4s; /* Transition effect */
+  border-radius: 25px;
+}
+
+.hover-button:hover {
+  box-shadow: 0 4px 8px 0 #DE5833, 0 6px 20px 0 #DE5833, 0 6px 20px 0 #DE5833, 0 6px 20px 0 #DE5833, 0 6px 20px 0 #DE5833
+  ,0 4px 8px 0 #DE5833, 0 4px 8px 0 #DE5833, 0 4px 8px 0 #DE5833, 0 4px 8px 0 #DE5833;
+}
