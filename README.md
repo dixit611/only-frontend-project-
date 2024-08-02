@@ -1,3 +1,7 @@
+# In email->Folder open goes
+            # In step_image->Folder open
+                            # There are two image step1.png and step2.png see and step copy and run python project
+# Follows the step and run python Django project
 1. git clone https://github.com/dixit611/only-frontend-project-.git
 
 2. cd only-frontend-project-
@@ -29,4 +33,7 @@
 11. python manage.py runserver
 
 # Your Django development server should now be running. You can access it at http://127.0.0.1:8000/ in your web browser.
+
+
+
 
