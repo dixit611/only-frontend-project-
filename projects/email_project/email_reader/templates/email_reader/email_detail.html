@@ -1,0 +1,28 @@
+<!-- email_reader/templates/email_reader/email_detail.html -->
+{% extends 'email_reader/base.html' %}
+
+{% block title %}Email Detail{% endblock %}
+
+{% block content %}
+<style>
+    .btn {
+        margin: 10px;
+    }
+</style>
+<div class="container my-4">
+    <h1>Email Detail</h1>
+    <dl class="row">
+        <dt class="col-sm-3 col-form-label">Name</dt>
+        <dd class="col-sm-9 col-form-label">{{ email.name }}</dd>
+        <dt class="col-sm-3 col-form-label">Price</dt>
+        <dd class="col-sm-9 col-form-label">₹{{ email.price }}</dd>
+        <dt class="col-sm-3 col-form-label">Detail</dt>
+        <dd class="col-sm-9 col-form-label">{{ email.detail }}</dd>
+    </dl>
+    <div class="btn-group" role="group" aria-label="Actions">
+        <a href="{% url 'email_update' email.pk %}" class="btn btn-warning">Edit</a>
+        <a href="{% url 'email_delete' email.pk %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'email_list' %}" class="btn btn-outline-secondary">Back to List</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!-- email_reader/templates/email_reader/email_confirm_delete.html -->
+{% extends 'email_reader/base.html' %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Confirm Delete</h1>
+    <p>Are you sure you want to delete "<strong>{{ email.name }}</strong>"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="d-flex justify-content-start">
+            <button type="submit" class="btn btn-outline-danger me-2">Confirm</button>
+            <a href="{% url 'email_list' %}" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
