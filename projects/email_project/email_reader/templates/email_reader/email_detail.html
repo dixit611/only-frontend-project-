@@ -4,25 +4,24 @@
 {% block title %}Email Detail{% endblock %}
 
 {% block content %}
-<style>
-    .btn {
-        margin: 10px;
-    }
-</style>
-<div class="container my-4">
-    <h1>Email Detail</h1>
-    <dl class="row">
-        <dt class="col-sm-3 col-form-label">Name</dt>
-        <dd class="col-sm-9 col-form-label">{{ email.name }}</dd>
-        <dt class="col-sm-3 col-form-label">Price</dt>
-        <dd class="col-sm-9 col-form-label">₹{{ email.price }}</dd>
-        <dt class="col-sm-3 col-form-label">Detail</dt>
-        <dd class="col-sm-9 col-form-label">{{ email.detail }}</dd>
-    </dl>
-    <div class="btn-group" role="group" aria-label="Actions">
-        <a href="{% url 'email_update' email.pk %}" class="btn btn-warning">Edit</a>
-        <a href="{% url 'email_delete' email.pk %}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'email_list' %}" class="btn btn-outline-secondary">Back to List</a>
+<div class="container-fluid my-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <h1 class="text-center mb-4">Email Detail</h1>
+            <dl class="row">
+                <dt class="col-sm-4">Name</dt>
+                <dd class="col-sm-8">{{ email.name }}</dd>
+                <dt class="col-sm-4">Price</dt>
+                <dd class="col-sm-8">₹{{ email.price }}</dd>
+                <dt class="col-sm-4">Detail</dt>
+                <dd class="col-sm-8">{{ email.detail }}</dd>
+            </dl>
+            <div class="d-flex justify-content-center mt-4">
+                <a href="{% url 'email_update' email.pk %}" class="btn btn-warning mx-2">Edit</a>
+                <a href="{% url 'email_delete' email.pk %}" class="btn btn-danger mx-2">Delete</a>
+                <a href="{% url 'email_list' %}" class="btn btn-outline-secondary mx-2">Back to List</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

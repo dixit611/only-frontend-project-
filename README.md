@@ -1,6 +1,6 @@
 # In email->Folder open goes
-            # In step_image->Folder open
-                            # There are two image step1.png and step2.png see and step copy and run python project
+            # In email->step_image->Folder open
+                            # There are two image step1.png and step2.png see and step copy  and run python project
 # Follows the step and run python Django project
 1. git clone https://github.com/dixit611/only-frontend-project-.git
 

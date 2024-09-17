@@ -21,13 +21,16 @@ def home(request):
         'email': email,
     })
 
+
 def email_list(request):
     emails = EmailData.objects.all()
     return render(request, 'email_reader/email_list.html', {'emails': emails})
 
+
 def email_detail(request, pk):
     email = get_object_or_404(EmailData, pk=pk)
     return render(request, 'email_reader/email_detail.html', {'email': email})
+
 
 def email_create(request):
     if request.method == 'POST':
@@ -39,6 +42,7 @@ def email_create(request):
     else:
         form = EmailDataForm()
     return render(request, 'email_reader/email_form.html', {'form': form})
+
 
 def email_update(request, pk):
     email = get_object_or_404(EmailData, pk=pk)
@@ -52,6 +56,7 @@ def email_update(request, pk):
         form = EmailDataForm(instance=email)
     return render(request, 'email_reader/email_form.html', {'form': form})
 
+
 def email_delete(request, pk):
     email = get_object_or_404(EmailData, pk=pk)
     if request.method == 'POST':
@@ -59,6 +64,7 @@ def email_delete(request, pk):
         messages.success(request, "Email deleted successfully.")
         return redirect('email_list')
     return render(request, 'email_reader/email_confirm_delete.html', {'email': email})
+
 
 def search_email(request):
     form = EmailSearchForm(request.POST or None)
