@@ -22,3 +22,5 @@ print(f"DB_NAME: {os.getenv('DB_NAME')}")
 print(f"EMAIL_HOST_USER: {os.getenv('EMAIL_HOST_USER')}")
 
 application = get_wsgi_application()
+
+app = application
